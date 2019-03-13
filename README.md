@@ -1,7 +1,10 @@
 # SF Food Trucks
 
+This is a sample about how to use docker, docker compose, and it is outdated, please do not use it for your peoduction.
+
 > Storage Saved after using Alpine Linux.
-> ![alpine](size.png)
+
+![alpine](size.png)
 
 > San Francisco's finger-licking street food now at your fingertips.
 
