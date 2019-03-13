@@ -1,12 +1,15 @@
 # start from base
-FROM ubuntu:latest
-MAINTAINER Prakhar Srivastav <prakhar@prakhar.me>
+FROM alpine:latest
 
 # install system-wide deps for python and node
-RUN apt-get -yqq update
-RUN apt-get -yqq install python-pip python-dev curl gnupg
+RUN apk add --update --no-cache  \
+  python \
+  python-pip \
+  python-dev \
+  curl \
+  gnupg
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash
-RUN apt-get install -yq nodejs
+RUN apk add nodejs
 
 # copy our application code
 ADD flask-app /opt/flask-app
