@@ -2,14 +2,13 @@
 FROM alpine:latest
 
 # install system-wide deps for python and node
-RUN apk add --update --no-cache  \
+RUN apk --no-cache add --update \
   python \
-  python-pip \
+  py-pip \
   python-dev \
   curl \
-  gnupg
-RUN curl -sL https://deb.nodesource.com/setup_8.x | bash
-RUN apk add nodejs
+  gnupg 
+RUN apk add nodejs nodejs-npm
 
 # copy our application code
 ADD flask-app /opt/flask-app
